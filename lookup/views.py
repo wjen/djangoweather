@@ -1,6 +1,9 @@
 from django.shortcuts import render
 import json
-import config
+import os
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv(find_dotenv())
 # Create your views here.
 def home(request):
     import json
@@ -8,7 +11,7 @@ def home(request):
 
     if request.method == 'POST':
         zipcode = request.POST['zipcode']
-        api_request = requests.get('http://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=' + zipcode + '&distance=25&API_KEY=' + config.API_KEY)
+        api_request = requests.get('http://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=' + zipcode + '&distance=25&API_KEY=' + os.environ.get('API_KEY'))
 
         try:
             api = json.loads(api_request.content)
