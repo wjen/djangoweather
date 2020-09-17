@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '0ay-jgwhh1tizn1*7izm6iqs=4r&*7
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1']
+ALLOWED_HOSTS = ['django-weather-quality.herokuapp.com','localhost','127.0.0.1']
 
 
 # Application definition
