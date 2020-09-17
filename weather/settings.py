@@ -23,12 +23,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECRET_KEY = '0ay-jgwhh1tizn1*7izm6iqs=4r&*7o=7(8)j=y*!0(k*pbe)8'
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '0ay-jgwhh1tizn1*7izm6iqs=4r&*7o=7(8)j=y*!0(k*pbe)8')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 
-# ALLOWED_HOSTS = ['django-weather-quality.herokuapp.com','localhost','127.0.0.1']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-weather-quality.herokuapp.com','localhost','127.0.0.1']
+# ALLOWED_HOSTS = []
 
 # Application definition
 
